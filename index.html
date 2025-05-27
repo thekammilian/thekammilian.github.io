@@ -3,19 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pranav Kammili - Resume-Based Profile</title>
+  <title>Pranav Kammili - Profile</title>
   <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #3b82f6;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-color: #1e293b;
+    }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f0f4f8;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
     header {
-      background-color: #1e3a8a;
+      background: linear-gradient(to right, #1e40af, #2563eb);
       color: white;
-      padding: 2rem;
+      padding: 3rem 2rem;
       text-align: center;
+    }
+    header h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.25rem;
+    }
+    header p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
     section {
       padding: 2rem;
@@ -23,41 +40,57 @@
       margin: auto;
     }
     h2 {
-      color: #1e3a8a;
+      color: var(--accent-color);
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.25rem;
     }
     .card {
-      background: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      background-color: var(--card-bg);
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      margin: 2rem 0;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
     }
     ul {
       list-style: none;
       padding-left: 1rem;
     }
     ul li::before {
-      content: '\2022';
-      color: #1e3a8a;
+      content: '\25B8';
+      color: var(--accent-color);
       font-weight: bold;
-      display: inline-block; 
+      display: inline-block;
       width: 1em;
       margin-left: -1em;
     }
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1e3a8a;
+      background-color: var(--primary-color);
       color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Pranav Kammili</h1>
-    <p>Computer Science & Data Science Student @ Purdue University</p>
-    <p style="margin-top: 1rem; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto;">
-     Hey! I’m a software engineer who loves building cool, useful stuff—whether it’s a streaming feature at Meta, internal tools at Costco, or side projects that mix sports and machine learning. I’ve worked across the stack (frontend, backend, mobile) and love diving into new tech and solving problems. Big fan of sports, data, clean UI, and learning by doing. Always down to collaborate or chat about fun ideas. Boiler up!
+    <p>
+      Hey! I’m a software engineer who loves building cool, useful stuff—whether it’s a streaming feature at Meta,
+      internal tools at Costco, or side projects that mix sports and machine learning. I’ve worked across the stack
+      (frontend, backend, mobile) and love diving into new tech and solving problems. Big fan of sports, data,
+      clean UI, and learning by doing. Always down to collaborate or chat about fun ideas. Boiler up!
     </p>
   </header>
 
@@ -65,7 +98,7 @@
     <div class="card">
       <h2>Education</h2>
       <ul>
-        <li>B.S. in Computer Science & Data Science, Purdue University (May 2025) </li>
+        <li>B.S. in Computer Science & Data Science, Purdue University </li>
         <li>Relevant Courses: Analysis of Algorithms, Systems Programming, Concurrent Programming, Data Mining, Machine Learning, AI, Statistical Theory</li>
       </ul>
     </div>
@@ -83,10 +116,10 @@
     <div class="card">
       <h2>Professional Experience</h2>
       <ul>
-        <li><strong>Meta</strong> – Android Software Engineering Intern (May 2024 – Aug 2024)<br>Enhanced Facebook Video Player with UI and accessibility improvements using Kotlin/Java.</li>
-        <li><strong>Costco Wholesale</strong> – ServiceNow Developer Intern (Jun 2023 – Aug 2023)<br>Automated workflows and platform scripts in JavaScript, reinforced API design and data modeling best practices.</li>
-        <li><strong>Purdue University</strong> – Teaching Assistant (Feb 2023 – Aug 2024)<br>Mentored students in OOP and Discrete Math, reinforcing knowledge of algorithms and data structures.</li>
-        <li><strong>T-Mobile</strong> – Explorer Intern (Jun 2021 – Aug 2021)<br>Built full-stack chatbot using React.js and Python for incident data retrieval with REST APIs and SQL.</li>
+        <li><strong>Meta</strong> – Android Software Engineering Intern (May 2024 – Aug 2024): Enhanced Facebook Video Player with UI and accessibility improvements using Kotlin/Java.</li>
+        <li><strong>Costco Wholesale</strong> – ServiceNow Developer Intern (Jun 2023 – Aug 2023): Automated workflows and platform scripts in JavaScript, reinforced API design and data modeling best practices.</li>
+        <li><strong>Purdue University</strong> – Teaching Assistant (Feb 2023 – Aug 2024): Mentored students in OOP and Discrete Math, reinforcing knowledge of algorithms and data structures.</li>
+        <li><strong>T-Mobile</strong> – Explorer Intern (Jun 2021 – Aug 2021): Built full-stack chatbot using React.js and Python for incident data retrieval with REST APIs and SQL.</li>
       </ul>
     </div>
 
@@ -103,9 +136,8 @@
     <div class="card">
       <h2>Contact</h2>
       <ul>
-        <li>Email: the.kammilian@gmail.com</li>
+        <li>Email: <a href="mailto:the.kammilian@gmail.com">the.kammilian@gmail.com</a></li>
         <li>GitHub: <a href="https://github.com/thekammilian" target="_blank">@thekammilian</a></li>
-        
       </ul>
     </div>
   </section>
