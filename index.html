@@ -35,4 +35,194 @@
     }
 
     header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: var(--primary-color);
+    }
+
+    .intro {
+      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: var(--accent-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.25rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      max-width: 1100px;  /* Increase the width of the cards */
+      margin-left: auto;
+      margin-right: auto;  /* Center the cards if the screen width allows */
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: '\2022';
+      color: var(--accent-color);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #fff;
+      color: var(--primary-color);
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 3rem;
+    }
+
+    /* Media queries to adjust font sizes for various devices */
+    @media (max-width: 1200px) {
+      html {
+        font-size: 2.5vw;  /* Scale the font size for medium screens */
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      .intro p {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 3.5vw;  /* Increase scaling for smaller screens */
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .intro p {
+        font-size: 1.1rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 4vw;  /* Further scaling down for small screens */
+      }
+      header h1 {
+        font-size: 1.75rem;
+      }
+      .intro p {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pranav Kammili</h1>
+  </header>
+
+  <section class="intro">
+    <p>
+      Hey! I’m a software engineer who loves building cool, useful stuff—whether it’s a streaming feature at Meta,
+      internal tools at Costco, or side projects that mix sports and machine learning. I’ve worked across the stack
+      (frontend, backend, mobile) and love diving into new tech and solving problems. Big fan of sports, data,
+      clean UI, and learning by doing. Always down to collaborate or chat about fun ideas. Boiler up!
+    </p>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Education</h2>
+      <ul>
+        <li>B.S. in Computer Science & Data Science, Purdue University</li>
+        <li>Relevant Courses: Analysis of Algorithms, Systems Programming, Concurrent Programming, Data Mining, Machine Learning, AI, Statistical Theory</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Languages: Java, Kotlin, Python, React.js, Node.js, HTML/CSS, C/C++</li>
+        <li>Frameworks/Tools: React, Node, Flask, Docker, Git</li>
+        <li>Cloud Platforms: Google Cloud (primary), some AWS parallels</li>
+        <li>Databases: Firebase (Firestore/Realtime DB), MongoDB, MySQL, SQLite, Neo4j</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li><strong>Meta</strong> – Android Software Engineering Intern (May 2024 – Aug 2024): Enhanced Facebook Video Player with UI and accessibility improvements using Kotlin/Java.</li>
+        <li><strong>Costco Wholesale</strong> – ServiceNow Developer Intern (Jun 2023 – Aug 2023): Automated workflows and platform scripts in JavaScript, reinforced API design and data modeling best practices.</li>
+        <li><strong>Purdue University</strong> – Teaching Assistant (Feb 2023 – Aug 2024): Mentored students in OOP and Discrete Math, reinforcing knowledge of algorithms and data structures.</li>
+        <li><strong>T-Mobile</strong> – Explorer Intern (Jun 2021 – Aug 2021): Built full-stack chatbot using React.js and Python for incident data retrieval with REST APIs and SQL.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Fantasy Football RB Projections</strong> – Developed ML models with high accuracy (R² = 1.0, 70% accuracy).</li>
+        <li><strong>Fantasy Football Positional Clustering</strong> – Applied PCA, K-Means, and SVD for strategy optimization.</li>
+        <li><strong>My CS Plan</strong> – Full-stack hackathon project using Flask backend and Next.js frontend, containerized with Docker.</li>
+        <li><strong>Shell Project</strong> – Implemented a Bash-like shell in C/C++ handling variables, wildcards, and concurrency.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:the.kammilian@gmail.com">the.kammilian@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/thekammilian" target="_blank">@thekammilian</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Pranav Kammili | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
+
 
