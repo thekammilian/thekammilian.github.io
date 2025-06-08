@@ -6,12 +6,17 @@
   <title>Pranav Kammili - Profile</title>
   <style>
     :root {
-      --primary-color: #121212;
-      --accent-color: #1a73e8;
-      --bg-color: #f7f7f7;
-      --card-bg: #ffffff;
-      --text-color: #333333;
-      --border-color: #e0e0e0;
+      --primary-color: #121212;  /* Dark gray similar to Medium's primary */
+      --accent-color: #2a7fff;  /* Medium's blue for links and accents */
+      --bg-color: #f7f7f7;  /* Light gray background */
+      --card-bg: #ffffff;  /* White card background */
+      --text-color: #333333;  /* Dark gray text for readability */
+      --border-color: #e0e0e0;  /* Soft gray for borders */
+    }
+
+    /* Root font size scaling */
+    html {
+      font-size: 2vw;  /* Set the base font size to 2% of the viewport width */
     }
 
     body {
@@ -38,7 +43,7 @@
     header p {
       max-width: 900px;
       margin: 1rem auto;
-      font-size: 1.2rem;
+      font-size: 1.5rem;  /* Scaled font size */
       color: var(--primary-color);
     }
 
@@ -99,6 +104,52 @@
       padding: 2rem;
       border-top: 1px solid var(--border-color);
       margin-top: 3rem;
+    }
+
+    /* Media queries to adjust font sizes for various devices */
+    @media (max-width: 1200px) {
+      html {
+        font-size: 2.5vw;  /* Scale the font size for medium screens */
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 3.5vw;  /* Increase scaling for smaller screens */
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 4vw;  /* Further scaling down for small screens */
+      }
+      header h1 {
+        font-size: 1.75rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
